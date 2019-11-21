@@ -7,10 +7,5 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MVC_Active_Site_Cloud_WebApplication.Views.Home
 {
-    public class Index1Model : PageModel
-    {
-        public void OnGet()
-        {
-        }
-    }
+   
 }
