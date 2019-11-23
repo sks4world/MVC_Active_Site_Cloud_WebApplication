@@ -1,86 +1,129 @@
 ﻿
-<html>
 
-<head>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel="stylesheet" href="style.css">
+@model IEnumerable<MVC_Active_Site_Cloud_WebApplication.Models.drug_recall>
 
-    <title>Food And Drug Recall</title>
-</head>
+<h2>Symbols</h2>
 
-<body>
-    <header>
-        <div class='headerdiv'>
-            <h2>Food and Drug Recalls</h2>
-        </div>
-    </header>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Country
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Product_description
+            </th>
+            <th>
+                Product_quantity
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.city)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.product_description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.product_quantity)
+                </td>
+            </tr>
+        }
+    </tbody>
 
-    <section>
-        <div class='divwon'>
-            <span class='dot'></span>
-            <span class='dot'></span>
-            <span class='dot'></span>
+</table>
+@*<html>
 
-        </div>
-        <div class='divtwo'></div>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel="stylesheet" href="style.css">
 
-        <div class='divthree'>
+        <title>Food And Drug Recall</title>
+    </head>
 
-            <h1>Click on a Menu to learn more</h1>
+    <body>
+        <header>
+            <div class='headerdiv'>
+                <h2>Food and Drug Recalls</h2>
+            </div>
+        </header>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="foodrecall.html">Food</a>
-                <a href="drugrecall.html">Drug</a>
-                <a href="blogs.html">Blogs</a>
-                <div class="animation start-home"></div>
-            </nav>
+        <section>
+            <div class='divwon'>
+                <span class='dot'></span>
+                <span class='dot'></span>
+                <span class='dot'></span>
 
-        </div>
+            </div>
+            <div class='divtwo'></div>
 
-        <div class='divfour'>
-            <h5>Want to know what a Food or Drug Recall is, or how it can affect you? Read the Blogs page.</h5>
-        </div>
+            <div class='divthree'>
 
-        <div class='sticky-container'>
-            <ul class='sticky'>
-                <li>
-                    <img src='f.png' width='32' height='32'>
-                    <h6><a href='https://facebook.com/USFMuma' target='_blank'>Like us on Facebook</a></h6>
-                </li>
-                <li>
-                    <img src='t.png' width='32' height='32'>
-                    <h6><a href='https://twitter.com/usfmuma' target='_blank'>Follow us on Twitter</a></h6>
-                </li>
-                <li>
-                    <img src='y.png' width='32' height='32'>
-                    <h6><a href='https://youtube.com/USFCollegeofBusiness' target='_blank'>Subscribe on Youtube</a></h6>
-                </li>
-                <li>
-                    <img src='i.png' width='32' height='32'>
-                    <h6><a href='https://instagram.com/usfmuma' target='_blank'>Follow us on Instagram</a></h6>
-                </li>
-                <li>
-                    <img src='g.png' width='32' height='32'>
-                    <h6><a href='https://github.com/sks4world/Assignment3_Web_LookAndFeel' target='_blank'>Fork us on Github</a></h6>
-                </li>
-            </ul>
-        </div>
+                <h1>Click on a Menu to learn more</h1>
+
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="foodrecall.html">Food</a>
+                    <a href="drugrecall.html">Drug</a>
+                    <a href="blogs.html">Blogs</a>
+                    <div class="animation start-home"></div>
+                </nav>
+
+            </div>
+
+            <div class='divfour'>
+                <h5>Want to know what a Food or Drug Recall is, or how it can affect you? Read the Blogs page.</h5>
+            </div>
+
+            <div class='sticky-container'>
+                <ul class='sticky'>
+                    <li>
+                        <img src='f.png' width='32' height='32'>
+                        <h6><a href='https://facebook.com/USFMuma' target='_blank'>Like us on Facebook</a></h6>
+                    </li>
+                    <li>
+                        <img src='t.png' width='32' height='32'>
+                        <h6><a href='https://twitter.com/usfmuma' target='_blank'>Follow us on Twitter</a></h6>
+                    </li>
+                    <li>
+                        <img src='y.png' width='32' height='32'>
+                        <h6><a href='https://youtube.com/USFCollegeofBusiness' target='_blank'>Subscribe on Youtube</a></h6>
+                    </li>
+                    <li>
+                        <img src='i.png' width='32' height='32'>
+                        <h6><a href='https://instagram.com/usfmuma' target='_blank'>Follow us on Instagram</a></h6>
+                    </li>
+                    <li>
+                        <img src='g.png' width='32' height='32'>
+                        <h6><a href='https://github.com/sks4world/Assignment3_Web_LookAndFeel' target='_blank'>Fork us on Github</a></h6>
+                    </li>
+                </ul>
+            </div>
 
 
 
-    </section>
+        </section>
 
-    <footer class='footer'>
+        <footer class='footer'>
 
-        <div class='divfooter'>
-            <p>
-                Information on <span>Food Recalls and Drug Recalls</span> Be Informed
-            </p>
-        </div>
+            <div class='divfooter'>
+                <p>
+                    Information on <span>Food Recalls and Drug Recalls</span> Be Informed
+                </p>
+            </div>
 
-    </footer>
+        </footer>
 
-</body>
-</html>
+    </body>
+    </html>*@

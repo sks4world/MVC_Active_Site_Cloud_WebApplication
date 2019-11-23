@@ -28,10 +28,10 @@ namespace MVC_Active_Site_Cloud_WebApplication.Controllers
         }
         public List<drug_recall> GetRecalls()
         {
-            string Foodrecall_API = BASE_URL + "?search=report_date:[20040101+TO+20131231]&limit=1";
+            string Foodrecall_API = BASE_URL + "?search=report_date:[20040101+TO+20131231]&limit=10";
             //string Foodrecall_API = BASE_URL + "ref-data/symbols";
             string recalllist = "";
-            List<drug_recall> samples = null;;
+            List<drug_recall> samples = null;
 
             httpClient.BaseAddress = new Uri(Foodrecall_API);
             HttpResponseMessage response = httpClient.GetAsync(Foodrecall_API).GetAwaiter().GetResult();
@@ -49,7 +49,7 @@ namespace MVC_Active_Site_Cloud_WebApplication.Controllers
                 JArray resultsArray = (JArray)recallJson["results"];
                 string resultsString = resultsArray.ToString();
                 samples = JsonConvert.DeserializeObject<List<drug_recall>>(resultsString);
-                samples = samples.GetRange(0,50);
+                samples = samples.GetRange(0,10);
 
             }
             return samples;
