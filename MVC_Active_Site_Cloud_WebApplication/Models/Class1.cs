@@ -36,7 +36,7 @@ namespace MVC_Active_Site_Cloud_WebApplication.Models
         public string Reason_for_recall { get; set; }
         public string isVoluntary { get; set; }
         public string country_id { get; set; }
-        public string city_id { get; set; }
+        public string city { get; set; }
         public string state { get; set; }
         public string distribution_coverage { get; set; }
     }
